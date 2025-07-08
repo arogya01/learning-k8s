@@ -1,0 +1,10 @@
+# this specific file is mapping the port to the host machine
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes: 
+- role: control-plane 
+  extraPortMappings: 
+  - containerPort: 30001
+    hostPort: 30001
+- role: worker
+- role: worker
